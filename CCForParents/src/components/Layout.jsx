@@ -5,7 +5,8 @@ function Layout(){
     <div>
         <nav>
             <div className="nav-text">
-                Robert F. Wagner College Corner
+                <img src="/images/logo.png" alt="College Logo" className="nav-logo" />
+                Robert F. Wagner Jr SSAT
             </div>
             <div className="nav-links">
                 <Link className='NavButtonStyles' to="/">
@@ -15,7 +16,10 @@ function Layout(){
                     RESOURCES
                 </Link>
                 <Link className='NavButtonStyles' to="/faq">
-                    GET HELP
+                    ASK QUESTIONS
+                </Link>
+                <Link className='NavButtonStyles' to="/contact">
+                    CONTACT US
                 </Link>
             </div>
         </nav>

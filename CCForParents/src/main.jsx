@@ -10,6 +10,8 @@ import Resources from './components/Resources.jsx'
 import FAQ from './components/FAQ.jsx'
 import ErrorPage from './components/ErrorPage.jsx'
 import Home from './components/Home.jsx'
+import Contact from './components/Contact.jsx'
+import Database from './components/Database.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -21,6 +23,8 @@ createRoot(document.getElementById('root')).render(
           <Route index element={<Home />} />
           <Route path="/resources" element={<Resources />} />
           <Route path="/faq" element={<FAQ />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/database" element={<Database />} />
           <Route path="*" element={<ErrorPage />} />  {/* Catch-all route */}
         </Route>
       </Routes>

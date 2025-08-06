@@ -6,7 +6,7 @@ const Home = () => {
 
     return(
         <div>
-            <p>In home page!</p>
+            <h1 className='HomepageHeaders'>Wagner College Corner</h1>
         </div>
     )
 }

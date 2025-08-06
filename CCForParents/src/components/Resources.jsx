@@ -8,8 +8,10 @@ const Resources = () => {
 
     return(
         <div>
-            <p>In resource page!</p>
+            <h1 className="HomepageHeaders">Resources</h1>
+            <h1 className="HomepageHeaders">Scholarships</h1>
         </div>
+
     )
 }
 

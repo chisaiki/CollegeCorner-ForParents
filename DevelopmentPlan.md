@@ -120,3 +120,52 @@ A React application designed to help parents navigate the college process for th
 - Clear call-to-action buttons
 - Minimal but effective navigation
 - Good information hierarchy
+
+# FAQ Page Forum Feature Implementation Plan
+
+## Goal
+Allow users to create posts and see a feed of them on the home page, edit, delete, or leave comments underneath them for discussions, and give upvotes for posts that you like.
+
+## Phase 1: Data Structure Planning
+**First, decide how to store posts:**
+- Each post needs: `id`, `title`, `content`, `author`, `timestamp`, `upvotes`, `comments[]`
+- Start with local state (`useState`) for prototyping
+- Later move to database (MongoDB, PostgreSQL, etc.)
+
+## Phase 2: Basic Post Creation & Display
+**Start with the simplest version:**
+1. **Create a Post component** - displays a single post
+2. **Modify your FAQ form** - capture and store new posts in state
+3. **Add a PostList component** - maps through posts and renders them
+4. **Test with dummy data first** - create sample posts to see the layout
+
+## Phase 3: State Management
+**Choose your approach:**
+- **React Context** - for sharing posts between FAQ and Home pages
+- **Props drilling** - simpler but less scalable
+- **State management library** - Redux, Zustand (for larger apps)
+
+## Phase 4: Core Features (one at a time)
+**Build these incrementally:**
+1. **Upvoting system** - add counter, click handler
+2. **Comments section** - nested form under each post
+3. **Edit/Delete** - add buttons, edit mode toggle
+4. **User identification** - simple username system first
+
+## Phase 5: UI/UX Improvements
+- **Sorting** (by date, upvotes, etc.)
+- **Search/filtering**
+- **Responsive design**
+- **Loading states**
+
+## Recommended Starting Point:
+1. Create a simple `Post.jsx` component
+2. Add a `posts` state array to your FAQ component
+3. When form submits, add new post to the array
+4. Display the posts below the form
+5. Test this basic flow before adding complexity
+
+## Key Questions to Answer First:
+- Where will posts be displayed? (FAQ page, Home page, or both?)
+- Do you need user authentication or just anonymous posts?
+- Should posts persist between browser sessions?

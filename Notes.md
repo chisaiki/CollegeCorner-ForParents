@@ -46,3 +46,35 @@ Navigation buttons weren't displaying side-by-side because I had 3 separate `<na
 </nav>
 ```
 CSS flexbox (`display: flex`) only works when multiple items are children of the same flex container.
+
+Forgot install supabase:  npm install @supabase/supabase-js
+
+## .env File Format Issues
+Environment variable files must follow specific format rules:
+- No spaces around the `=` sign
+- No quotes around values (unless the value actually contains quotes)
+- Each variable on its own line
+- Format: `VARIABLE_NAME=value`
+
+```properties
+// Wrong
+VITE_SUPABASE_URL = https://your-url.supabase.co
+VITE_SUPABASE_ANON_KEY = 'your-key-here'
+
+// Correct
+VITE_SUPABASE_URL=https://your-url.supabase.co
+VITE_SUPABASE_ANON_KEY=your-key-here
+```
+
+**Important**: After changing `.env` file, restart your development server for changes to take effect.
+
+**Location**: The `.env` file must be in the root directory (same level as `package.json`), not inside the `src/` folder.
+
+
+
+
+
+
+
+
+supabase: PDh$y7wrt.8Pr6j
